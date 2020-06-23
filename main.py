@@ -10,7 +10,7 @@ def assure_path_exists(path):
         os.makedirs(dir)
 
 
-face_id=input('enter your id')
+face_id=0
 
 def img_capturing():
 	# Start capturing video 
@@ -77,8 +77,8 @@ def std_registration():
     Label(tkWindow,text='Rollno').grid(row=0, sticky=W)
     v=StringVar()
     idlabelinput=Entry(tkWindow , textvariable=v).grid(row=0)
-    face_id=v.get()
-    print(face_id)
+    a=v.get()
+    face_id=int(a)
 
     Label(tkWindow, text="name" ).grid(row=1, sticky=W)
     name=StringVar()
@@ -93,3 +93,4 @@ def std_registration():
 
 
 std_registration()
+
